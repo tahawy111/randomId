@@ -1,0 +1,12 @@
+{
+  "name": "randomid",
+  "version": "1.0.0",
+  "description": "Very Amazing function to create randomid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["randomid","unique id","random uuid","id generator"],
+  "author": "",
+  "license": "ISC"
+}
