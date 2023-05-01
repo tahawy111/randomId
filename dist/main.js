@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.randomId = void 0;
-function randomId() {
+function randomid() {
     const keysList = "abcdefghijklmnopqrstuvwxyz".split("").concat(Date.now().toString().split(""));
     let retVal = [];
     for (var i = 0; i < keysList.length; i++) {
@@ -9,5 +8,4 @@ function randomId() {
     }
     return retVal.join('').substring(0, 26);
 }
-exports.randomId = randomId;
-console.log(randomId());
+exports.default = randomid;
