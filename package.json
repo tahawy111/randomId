@@ -1,6 +1,6 @@
 {
   "name": "@tahawy111/randomid.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Very Amazing function to create Random Unique Id",
   "repository": "https://github.com/tahawy111/randomId",
   "main": "index.js",
