@@ -1,4 +1,4 @@
-export function randomId(): string {
+export default function randomid(): string {
   const keysList: string[] = "abcdefghijklmnopqrstuvwxyz".split("").concat(Date.now().toString().split(""));
   let retVal: string[] = [];
   for (var i = 0; i < keysList.length; i++) {
@@ -7,5 +7,3 @@ export function randomId(): string {
 
   return retVal.join('').substring(0,26);
 }
-
-console.log(randomId());

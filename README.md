@@ -1,15 +1,15 @@
-# <!-- Title --> Get Date Ago
+# <!-- Title --> randomid.js
 
-Very Amazing function to create randomid
+Very Amazing function to create Random Unique Id
 
 # Install
 
-`npm install randomid`
+`npm install @tahawy111/randomid.js`
 
 # Usage
 
 ```js
-import randomid from "randomid";
+import randomid from "@tahawy111/randomid.js";
 
  just call the funcion like below
 

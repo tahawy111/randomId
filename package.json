@@ -1,7 +1,7 @@
 {
-  "name": "randomid",
+  "name": "@tahawy111/randomid.js",
   "version": "1.0.0",
-  "description": "Very Amazing function to create randomid",
+  "description": "Very Amazing function to create Random Unique Id",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
