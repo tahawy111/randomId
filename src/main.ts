@@ -32,7 +32,6 @@ class RandomId {
 
 }
 
-const id = new RandomId().randomid()
 
 console.log(new RandomId().randomid()); // returns => ym0kg4cy16rk7t2z674w4y6yh3
 console.log(new RandomId().randomid()); // returns => gqacpenixft8frhy3nck6nzvse
