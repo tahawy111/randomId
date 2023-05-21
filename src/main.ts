@@ -26,7 +26,7 @@ class RandomId {
             this.counter = 0;
         }
         this.lastTimestamp = timestamp;
-        return `${timestamp + this.counter}`
+        return timestamp.toString().substring(0, 12) + this.counter.toString();
     }
 
 }
