@@ -25,9 +25,6 @@ class RandomId {
         return `${timestamp + this.counter}`;
     }
 }
-console.log(Date.now());
-console.log(Date.now());
-console.log(Date.now());
 // console.log(new RandomId().randomid()); // returns => ym0kg4cy16rk7t2z674w4y6yh3
 // console.log(new RandomId().randomid()); // returns => gqacpenixft8frhy3nck6nzvse
 // console.log(new RandomId().randomid()); // returns => ep6j4prd03tlm1mddy3pqocnzx
