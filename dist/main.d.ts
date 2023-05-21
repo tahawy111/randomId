@@ -1,1 +1,1 @@
-export default function randomid(): string;
+export {};

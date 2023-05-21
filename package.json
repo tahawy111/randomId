@@ -1,5 +1,6 @@
 {
   "name": "@tahawy111/randomid.js",
+  "type": "commonjs",
   "version": "1.0.3",
   "description": "Very Amazing function to create Random Unique Id",
   "repository": "https://github.com/tahawy111/randomId",
@@ -7,7 +8,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["randomid","unique id","random uuid","id generator"],
+  "keywords": [
+    "randomid",
+    "unique id",
+    "random uuid",
+    "id generator"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.1"
+  }
 }
