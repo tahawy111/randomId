@@ -1,6 +1,6 @@
 {
   "name": "@tahawy111/randomid.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Very Amazing function to create Random Unique Id",
   "repository": "https://github.com/tahawy111/randomId",
   "main": "dist/main.js",
@@ -15,7 +15,8 @@
     "Random numbers",
     "Random unique numbers",
     "Random Unique Numbers",
-    "Generate Random Time Stamp"
+    "Generate Random Time Stamp",
+    "Random Time Stamp"
   ],
   "author": "",
   "license": "ISC"

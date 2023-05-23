@@ -55,8 +55,8 @@ class RandomId {
         return this.randomUniqueArrayOfNumbers(length)[0];
     }
 
-    public generateRandomTimeStamp(): number {
-        return Math.abs(new Date(Math.floor(Math.random() * 10000) + 5000, Math.floor(Math.random() * 11) + 0, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 24) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 1000) + 1).getTime());
+    public randomTimeStamp(): number {
+        return Math.abs(+new Date(Math.floor(Math.random() * 10000) + 5000, Math.floor(Math.random() * 11) + 0, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 24) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 1000) + 1));
     }
 
 }
@@ -67,6 +67,6 @@ class RandomId {
 // console.log(new RandomId().randomid()); // returns => 7873cbd6ot4obj8npalbac10fw
 // console.log(new RandomId().randomid()); // returns => tkuu48b787m07vzw3czveu67mc
 // console.log(new RandomId().randomid()); // returns => hqtm4xlkrf3yq0rnlcuk6uvo3b
-// console.log(new RandomId().randomUniqueNumbers(7)); // returns => 3li7mna467wa4vtb7g437y73j4
+console.log(new RandomId().randomTimeStamp()); // returns => 3li7mna467wa4vtb7g437y73j4
 
 export default RandomId;

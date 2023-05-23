@@ -7,6 +7,6 @@ declare class RandomId {
     getTimestamp(): string;
     randomUniqueArrayOfNumbers(length: number): number[];
     randomUniqueNumbers(length: number): number;
-    generateRandomTimeStamp(): number;
+    randomTimeStamp(): number;
 }
 export default RandomId;
