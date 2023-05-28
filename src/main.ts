@@ -8,13 +8,9 @@ class RandomId {
     }
 
     public randomid(): string {
-        const keysList: string[] = "abcdefghijklmnopqrstuvwxyz".split("").concat(this.getTimestamp().split(""));
-        let retVal: string[] = [];
-        for (var i = 0; i < keysList.length; i++) {
-            retVal.push(keysList[Math.floor(Math.random() * keysList.length)]);
-        }
-
-        return retVal.join('').substring(0, 26);
+        const keysList: string[] = [..."abcdefghijklmnopqrstuvwxyz", ...this.getTimestamp().split("")];
+        let retVal: string[] = keysList.map(() => keysList[Math.floor(Math.random() * keysList.length)]);
+        return retVal.join('');
     }
 
     protected generateRandomNumber(length: number): number {
@@ -56,7 +52,7 @@ class RandomId {
     }
 
     public randomTimeStamp(): number {
-        return Math.abs(+new Date(Math.floor(Math.random() * 10000) + 5000, Math.floor(Math.random() * 11) + 0, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 24) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 1000) + 1));
+        return Math.abs(+new Date(Math.floor(Math.random() * 10000) + 10000, Math.floor(Math.random() * 11) + 0, Math.floor(Math.random() * 30) + 1, Math.floor(Math.random() * 24) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 60) + 1, Math.floor(Math.random() * 1000) + 1));
     }
 
 }
@@ -67,6 +63,8 @@ class RandomId {
 // console.log(new RandomId().randomid()); // returns => 7873cbd6ot4obj8npalbac10fw
 // console.log(new RandomId().randomid()); // returns => tkuu48b787m07vzw3czveu67mc
 // console.log(new RandomId().randomid()); // returns => hqtm4xlkrf3yq0rnlcuk6uvo3b
-console.log(new RandomId().randomTimeStamp()); // returns => 3li7mna467wa4vtb7g437y73j4
+for (let i = 0; i < 100; i++) {
+    console.log(new RandomId().randomTimeStamp().toString().length); // returns => 3li7mna467wa4vtb7g437y73j4
+}
 
 export default RandomId;
