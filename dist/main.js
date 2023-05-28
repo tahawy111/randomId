@@ -1,18 +1,13 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class RandomId {
     constructor() {
         this.counter = 0;
         this.lastTimestamp = 0;
     }
     randomid() {
-        const keysList = [..."abcdefghijklmnopqrstuvwxyz", ...this.getTimestamp().split("")];
+        const keysList = [..."abcdefghijklmnopqrstuvwxyz", ...`${this.randomTimeStamp()}`.split("")];
         let retVal = keysList.map(() => keysList[Math.floor(Math.random() * keysList.length)]);
-        return retVal.join('');
-    }
-    generateRandomNumber(length) {
-        return Math.floor(+`1${"0".repeat(length - 1)}` +
-            Math.random() * +`9${"0".repeat(length - 1)}`); // generates a 6-digit random number
+        return retVal.join('').substring(0, 26);
     }
     getTimestamp() {
         const timestamp = Date.now();
@@ -24,6 +19,10 @@ class RandomId {
         }
         this.lastTimestamp = timestamp;
         return timestamp.toString().substring(0, 12) + this.counter.toString();
+    }
+    generateRandomNumber(length) {
+        return Math.floor(+`1${"0".repeat(length - 1)}` +
+            Math.random() * +`9${"0".repeat(length - 1)}`); // generates a 6-digit random number
     }
     randomUniqueArrayOfNumbers(length) {
         let uniqueNumbersArr = []; // create an empty Arr to store unique numbers
@@ -49,7 +48,15 @@ class RandomId {
 // console.log(new RandomId().randomid()); // returns => 7873cbd6ot4obj8npalbac10fw
 // console.log(new RandomId().randomid()); // returns => tkuu48b787m07vzw3czveu67mc
 // console.log(new RandomId().randomid()); // returns => hqtm4xlkrf3yq0rnlcuk6uvo3b
-for (let i = 0; i < 1000; i++) {
-    console.log(new RandomId().randomTimeStamp().toString().length); // returns => 3li7mna467wa4vtb7g437y73j4
-}
-exports.default = RandomId;
+// // Testing if the array contains a duplicates ♥ NO DUPLICATES (1/1000000)
+// const arr: string[] = [];
+// for (let i = 0; i < 10000000; i++) {
+//     arr.push(new RandomId().randomid());
+// }
+// const hasDuplicates = new Set(arr).size !== arr.length;
+// if (hasDuplicates) {
+//     console.log('The array contains duplicates');
+// } else {
+//     console.log('The array does not contain duplicates');
+// }
+// export default RandomId;

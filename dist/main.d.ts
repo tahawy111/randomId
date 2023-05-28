@@ -3,10 +3,9 @@ declare class RandomId {
     protected lastTimestamp: number;
     constructor();
     randomid(): string;
-    protected generateRandomNumber(length: number): number;
     getTimestamp(): string;
+    protected generateRandomNumber(length: number): number;
     randomUniqueArrayOfNumbers(length: number): number[];
     randomUniqueNumbers(length: number): number;
     randomTimeStamp(): number;
 }
-export default RandomId;
